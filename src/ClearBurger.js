@@ -1,6 +1,6 @@
 import React from 'react';
 
-export default function ClearBurger(props) {
+function ClearBurger(props) {
   return(
     <div>
       <button onClick={(e) => props.clear(e)}>CLEAR</button>
@@ -8,4 +8,4 @@ export default function ClearBurger(props) {
   )
 }
 
-// export default ClearBurger;
+export default ClearBurger;

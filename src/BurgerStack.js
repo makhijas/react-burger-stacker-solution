@@ -4,7 +4,8 @@ import Ingredient from './Ingredient';
 function BurgerStack(props) {
   const { stack, clearIng } = props;
   const listOfIngredients = stack.map((ing, index) => {
-    const { name, color } = ing;
+    const { name, color } = ing; // inside map
+
     if (index === 0) {
       return (
         <div key={`ing-${index}`}>
@@ -15,7 +16,8 @@ function BurgerStack(props) {
     } else {
       return <Ingredient key={`ing-${index}`} name={name} color={color} />
     }
-  })
+  });
+
   return listOfIngredients;
 }
 

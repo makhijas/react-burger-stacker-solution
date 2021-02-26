@@ -3,10 +3,12 @@ import BurgerStack from './BurgerStack';
 import ClearBurger from './ClearBurger';
 
 function BurgerPane(props) {
+  const { stack, clear, clearIng } = props;
+  
   return(
     <div className="burgPaneDiv">
-      <BurgerStack stack={props.stack} clearIng={props.clearIng} />
-      <ClearBurger clear={props.clear} />
+      <BurgerStack stack={stack} clearIng={clearIng} />
+      <ClearBurger clear={clear} />
     </div>
   )
 }
