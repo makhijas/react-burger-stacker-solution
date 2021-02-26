@@ -5,18 +5,18 @@ import IngredientList from './IngredientList';
 import IngForm from './IngForm';
 
 let ingredientSeed = [
-  {name: 'Kaiser Bun', color: 'saddlebrown'},
-  {name: 'Sesame Bun', color: 'sandybrown'},
-  {name: 'Gluten Free Bun', color: 'peru'},
-  {name: 'Lettuce Wrap', color: 'olivedrab'},
-  {name: 'Beef Patty', color: '#3F250B'},
-  {name: 'Soy Patty', color: '#3F250B'},
-  {name: 'Black Bean Patty', color: '#3F250B'},
-  {name: 'Chicken Patty', color: 'burlywood'},
-  {name: 'Lettuce', color: 'lawngreen'},
-  {name: 'Tomato', color: 'tomato'},
-  {name: 'Bacon', color: 'maroon'},
-  {name: 'Onion', color: 'lightyellow'},
+  { name: 'Kaiser Bun', color: 'saddlebrown' },
+  { name: 'Sesame Bun', color: 'sandybrown' },
+  { name: 'Gluten Free Bun', color: 'peru' },
+  { name: 'Lettuce Wrap', color: 'olivedrab' },
+  { name: 'Beef Patty', color: '#3F250B' },
+  { name: 'Soy Patty', color: '#3F250B' },
+  { name: 'Black Bean Patty', color: '#3F250B' },
+  { name: 'Chicken Patty', color: 'burlywood' },
+  { name: 'Lettuce', color: 'lawngreen' },
+  { name: 'Tomato', color: 'tomato' },
+  { name: 'Bacon', color: 'maroon' },
+  { name: 'Onion', color: 'lightyellow' },
 ];
 
 function App(props) {
@@ -25,7 +25,7 @@ function App(props) {
 
   // TODO declare some functions
   function stackBurger(e) {
-    let ingToAdd = ingredients.filter(ing => ing.name === e.target.innerText);
+    const ingToAdd = ingredients.filter(ing => ing.name === e.target.innerText);
     setStack([ingToAdd[0], ...stack]);
   }
 
@@ -37,12 +37,12 @@ function App(props) {
     e.preventDefault();
     let ingName = document.querySelector('#ingName').value;
     let ingColor = document.querySelector('#ingColor').value;
-    let ing = {name: ingName, color: ingColor};
+    const ing = { name: ingName, color: ingColor };
     setIngredients([ing, ...ingredients]);
   }
 
   function clearIng() {
-    let tempStack = stack;
+    const tempStack = stack;
     tempStack.shift();
     setStack([...tempStack]);
   }

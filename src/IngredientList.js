@@ -2,13 +2,14 @@ import React from 'react';
 import Ingredient from './Ingredient';
 
 function IngredientList(props) {
-  return(
-    <div className="ingListDiv">
-      {props.ingredients.map((ing, index) => {
-        return <Ingredient key={`in-${index}`} name={ing.name} color={ing.color} stackBurger={props.stackBurger} />
-      })}
-    </div>
-  )
+  const { ingredients, stackBurger } = props;
+  const list = ingredients.map((ing, index) => {
+    const { name, color, } = ing;
+    
+    return <Ingredient key={`ing-${index}`} name={name} color={color} stackBurger={stackBurger} />
+  });
+
+  return <div className="ingListDiv">{list}</div>
 }
 
 export default IngredientList;
