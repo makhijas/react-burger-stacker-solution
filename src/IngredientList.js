@@ -12,4 +12,4 @@ function IngredientList(props) {
   return <div className="ingListDiv">{list}</div>
 }
 
-export default IngredientList;
+export default IngredientList;  
